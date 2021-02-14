@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string><NAME></string>
+    <key>WorkingDirectory</key>
+    <string><CWD></string>
+    <key>ProgramArguments</key>
+    <array>
+        <string><EXE></string>
+        <string>-d</string>
+        <string>.</string>
+        <string>-f</string>
+        <string><CONFIG></string>
+    </array>
+    <key>StandardOutPath</key>
+    <string>/tmp/<NAME>.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/<NAME>.log</string>
+    <key>RunAtLoad</key>
+    <true/>
+    <!--
+        start job every 60 seconds
+    -->
+    <!--
+    <key>StartInterval</key>
+    <integer>60</integer>
+    -->
+
+    <!--
+        crontab like job schedular
+    -->
+    <!--
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Minute</key>
+        <integer>0</integer>
+        <key>Hour</key>
+        <integer>0</integer>
+        <key>Day</key>
+        <integer>0</integer>
+        <key>Weekday</key>
+        <integer>0</integer>
+        <key>Month</key>
+        <integer>0</integer>
+    </dict>
+
+    -->
+</dict>
+</plist>

@@ -1,0 +1,20 @@
+[Unit]
+Description=clash service
+#After=network.target
+
+[Service]
+Type=simple
+ExecStartPre=<START_PRE>
+ExecStart=<START>
+ExecStartPost=<START_POST>
+
+ExecStopPost=<STOP_POST>
+
+User=<USER>
+WorkingDirectory=<CWD>
+
+Restart=always
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE CAP_NET_RAW
+#Environment=
+[Install]
+WantedBy=multi-user.target
