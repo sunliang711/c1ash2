@@ -136,7 +136,7 @@ add(){
     local gateway=${2}
 
     # exist?
-    if [ -e ${etcDir}/$name.json ];then
+    if [ -e ${etcDir}/$name ];then
         echo "${RED}Error: already exists${NORMAL}"
         exit 1
     fi
@@ -149,6 +149,8 @@ add(){
     (cd ${subDir} && _run "ln -sf ../../Country.mmdb .")
     # copy a config file
     (cd ${subDir} && _run "cp ${templateDir}/config-example.yaml ${name}.yaml")
+
+    ${ed} ${etcDir}/$name/${name}.yaml
 
     # service file
     case $(uname) in
