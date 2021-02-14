@@ -11,7 +11,7 @@ log-level: info
 external-controller: 127.0.0.1:9090
 dns:
   # NOTE set true when as server
-  enable: true
+  enable: false
   listen: 0.0.0.0:53
   enhanced-mode: fake-ip
   # enhanced-mode: redir-host
@@ -30,7 +30,7 @@ dns:
 
 tun:
   # NOTE set true when as server
-    enable: true
+    enable: false
 cfw-bypass:
   - qq.com
   - music.163.com
